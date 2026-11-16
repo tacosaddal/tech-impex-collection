@@ -1,0 +1,128 @@
+<div id="app">
+<canvas id="gl" aria-hidden="true"></canvas>
+<i id="svh" aria-hidden="true"></i>
+
+<div id="loader" aria-hidden="true">
+  <div class="ld">
+    <p class="ld__k mono"><span data-studio>Tech Impex</span> &nbsp;/&nbsp; The Collection</p>
+    <div class="ld__n" id="ldn">000</div>
+    <div class="ld__bar"><i id="ldb"></i></div>
+    <p class="ld__m mono" id="ldm">Unlocking the doors</p>
+  </div>
+</div>
+
+<header class="hud" id="hud">
+  <div class="wrap hud__top">
+    <a class="logo" href="#top" id="logo" aria-label="Back to the foyer">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 28V8.5L16 3l11 5.5V28"/><path d="M12 28V14h8v14"/><path d="M2 28h28"/></svg>
+      <span data-studio>Tech Impex</span>
+    </a>
+    <p class="hud__rm mono" id="rm" aria-live="polite">Foyer</p>
+    <nav class="hud__nav mono" aria-label="Site">
+      <button type="button" class="hud__tour" id="tourb" data-tour aria-pressed="false">Guided tour</button>
+      <button type="button" id="catb">Catalogue</button>
+      <button class="snd" id="snd" type="button" aria-pressed="false" aria-label="Toggle sound">
+        <span class="snd__b" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="snd__t" id="sndt">Sound off</span>
+      </button>
+      <button type="button" class="hud__cta" data-go="11">Commission a piece</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section id="walk" aria-label="A walk through the collection">
+  <div class="stage" id="stage">
+    <div class="scrim" aria-hidden="true"></div>
+
+    <div class="hero is-on" id="hero">
+      <div class="wrap hero__in">
+        <p class="eyebrow mono rv" style="--i:0"><span data-studio>Tech Impex</span> &nbsp;/&nbsp; Software house<span class="wide"> &nbsp;/&nbsp; The Collection</span></p>
+        <h1 class="hero__t">
+          <span class="ln"><span class="rv" style="--i:1">Please <em>touch</em></span></span>
+          <span class="ln"><span class="rv" style="--i:2">the exhibits.</span></span>
+        </h1>
+        <div class="hero__row">
+          <p class="lede rv" style="--i:3">Games, AR, VR and XR, and the systems that run a business. Ten working pieces across five rooms, and none of them behind glass.</p>
+          <div class="row rv" style="--i:4">
+            <button class="btn btn--fill" type="button" data-go="1">Walk in<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4"/></svg></button>
+            <button class="btn" type="button" data-tour>Take the guided tour</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="label" id="label" aria-live="polite"></aside>
+    <div class="arf" id="arf" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="mono">Tracking surface</span></div>
+    <div class="artag mono" id="artag" aria-hidden="true">Chair  0.5 × 1.1 m</div>
+
+    <div class="ghud" id="ghud">
+      <div class="ghud__top mono">
+        <div><small>Score</small><b id="gscore">000000</b></div>
+        <div><small>Level</small><b id="glv">01</b></div>
+        <div><small>Lives</small><span class="lives" id="glives"><i></i><i></i><i></i></span></div>
+      </div>
+      <button class="xbtn mono" id="gx" type="button">Leave the cabinet <kbd>Esc</kbd></button>
+      <p class="ghud__hint mono"><span class="wide">Move with your mouse or the arrow keys</span><span class="narrow">Drag to move the paddle</span></p>
+    </div>
+    <div class="gover" id="gover" role="dialog" aria-modal="true" aria-labelledby="gover-h">
+      <p class="mono" id="gover-h">Game over</p>
+      <b id="gfinal">000000</b>
+      <p class="mono" id="gbest">High score 000000</p>
+      <div class="row"><button class="btn btn--fill" id="gagain" type="button">Play again</button><button class="btn" id="gleave" type="button">Back to the gallery</button></div>
+    </div>
+
+    <div class="vrhud" id="vrhud">
+      <p class="vrhud__t mono"><b>Deepshift</b> &nbsp;/&nbsp; <span id="vrn">0 of 3 beacons found</span></p>
+      <div class="eyes mono" aria-hidden="true"><span>Left eye</span><span>Right eye</span></div>
+      <div class="vrhud__b">
+        <p class="mono">Drag to look around. Hold the ring on a beacon.</p>
+        <button class="xbtn mono" id="vrx" type="button">Take off the headset <kbd>Esc</kbd></button>
+      </div>
+    </div>
+
+    <section class="commission" id="commission" aria-labelledby="com-h">
+      <div class="wrap com__in">
+        <p class="mono rv" style="--i:0">Room V &nbsp;/&nbsp; Commission</p>
+        <h2 class="com__h" id="com-h">
+          <span class="ln"><span class="rv" style="--i:1">This plinth</span></span>
+          <span class="ln"><span class="rv" style="--i:2">is <em>empty.</em></span></span>
+        </h2>
+        <p class="com__p rv" style="--i:3"><span class="com__p1">It is waiting for the next piece, and that could be yours. </span>Tell us what you need built and we will reply within one working day.</p>
+        <div class="com__r rv" style="--i:4">
+          <div id="commission-mail"></div>
+          <dl class="com__l">
+            <div><dt class="mono">Call</dt><dd>[Phone number]</dd></div>
+            <div><dt class="mono">Visit</dt><dd>[City], United Kingdom</dd></div>
+            <div><dt class="mono">Local time</dt><dd id="clock">UK</dd></div>
+          </dl>
+        </div>
+        <p class="com__tag mono rv" style="--i:5"><i></i><span><em>Untitled (your project)</em>, <span data-yr>2026</span>. Medium to be decided together.</span></p>
+        <p class="com__f mono rv" style="--i:6">&copy; <span data-yr>2026</span> <span data-studio>Tech Impex</span> &nbsp;/&nbsp; Works on show are samples &nbsp;/&nbsp; Admission free, open all hours</p>
+      </div>
+    </section>
+
+    <div class="plan" id="planw">
+      <div class="plan__s mono"><span id="stopn">Foyer</span><div><button type="button" id="prev" aria-label="Previous stop"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13 7H2M6 3L2 7l4 4"/></svg></button><button type="button" id="next" aria-label="Next stop"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4"/></svg></button></div></div>
+      <div class="plan__in" id="plan"></div>
+    </div>
+    <p class="hint mono" id="hint"><i aria-hidden="true"></i><span id="hintt">Scroll to walk</span></p>
+    <div class="prog" id="prog" aria-hidden="true"></div>
+  </div>
+</section>
+</main>
+
+<section class="sheet" id="cat" role="dialog" aria-modal="true" aria-labelledby="cat-h"><div class="sheet__p wrap" id="catp" data-scrollable></div></section>
+
+<section class="sys" id="sys" role="dialog" aria-modal="true" aria-labelledby="sys-t">
+  <div class="sys__in" data-scrollable>
+    <header class="sys__h">
+      <div><p class="mono"><span id="sys-c">Sales management systems</span> &nbsp;/&nbsp; live sample</p><h3><em id="sys-t">Northstar</em></h3></div>
+      <button class="btn" id="sysx" type="button"><span class="wide">Back to the gallery</span><span class="narrow">Close</span></button>
+    </header>
+    <div class="demo__stage" id="demo"></div>
+    <p class="sys__n mono">It is running. Drag a deal to Won, click a job status, hover the chart.</p>
+  </div>
+</section>
+
+<div class="cur" id="cur" aria-hidden="true"><div class="cur__r"><span id="curt"></span></div><div class="cur__d"></div></div>
+</div>
